@@ -62,7 +62,10 @@ const coinFlip = () => {
 
 
 //rolls a die with variable amount of sides and returns the result
+//will roll a default of 6 if no argument is passed in
 const rollDie = sides => {
+    if (sides === undefined)
+        return randomIntBetween(1, 7);
     return randomIntBetween(1, sides+1);
 }
 
@@ -74,4 +77,26 @@ const twoDice = () => {
 }
 
 // console.log(twoDice());
+
+//rolls a twenty-sided die
+const twentySidedDie = () => {
+    return rollDie(20);
+}
+
+// console.log("D20", twentySidedDie());
+
+//rolls a twelve-sided die
+const twelveSidedDie = () => {
+    return rollDie(12);
+}
+
+// console.log("D12", twelveSidedDie());
+
+//rolls a four-sided die
+const tetrahedron = () => {
+    return rollDie(4);
+}
+
+// console.log("D4", tetrahedron());
+// console.log("rollDie()", rollDie());
 

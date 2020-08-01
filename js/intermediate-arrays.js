@@ -131,6 +131,7 @@
     // console.log(removeAll([1,2,3], 2));
     // console.log(removeAll([2,2,3,4,5,2,2], 2));
 
+    //returns an array with the num-elements of the Fibonacci sequenece
     const getNFibonacci = num => {
         var fibonacciArray = [0, 1];
 
@@ -148,11 +149,34 @@
         return fibonacciArray;
     };
 
+    //returns an array with 10 elements of the Fibonacci sequence
     const firstTenFibonacciNumbers = () => {
         return getNFibonacci(10);
     };
 
     // console.log(firstTenFibonacciNumbers());
     // console.log(getNFibonacci(5));
+
+    //takes an array, moves first element to last
+    const moveFirstToLast = arr => {
+        var newArray = arr.slice(1);
+        return newArray.concat(arr[0]);
+    };
+
+    // console.log(moveFirstToLast(testArray1));
+    // console.log(moveFirstToLast(testArray2));
+
+    //takes two arrays of same length and returns an
+    //array of arrays with elements of the same index
+    const zip = (arr1, arr2) => {
+        var newArray = [];
+
+        arr1.forEach( (element, index) => {
+           newArray.push([element, arr2[index]]);
+        });
+        return newArray;
+    };
+
+    // console.log(zip(testArray1, testArray2));
 
 })();

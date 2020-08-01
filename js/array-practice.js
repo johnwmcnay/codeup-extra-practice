@@ -45,3 +45,15 @@ const removeAll = ( (arr, value) => {
 // console.log(removeAll(bugs, "mosquito"));
 // console.log(removeAll(bugs, "roach"));
 
+const randomIntBetween = (min, max) => {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+// console.log("Random number between 5 and 75:", randomIntBetween(5, 75));
+
+const coinFlip = () => {
+    return randomIntBetween(0, 2);
+}
+
+// console.log(coinFlip());
+

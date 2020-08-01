@@ -100,3 +100,21 @@ const tetrahedron = () => {
 // console.log("D4", tetrahedron());
 // console.log("rollDie()", rollDie());
 
+//returns an array of d6 rolls by default
+//optionally takes a function to determine the dice roll
+const listOfRolls = (rolls, diceFunction) => {
+    var rollList = [];
+    var diceFunc = (diceFunction === undefined) ?
+        rollDie : diceFunction;
+
+    for (var roll = 0; roll < rolls; roll++) {
+        rollList.push(diceFunc());
+    }
+    return rollList;
+}
+
+// console.log("5 rolls:", listOfRolls(5));
+// console.log("8 rolls:", listOfRolls(8));
+// console.log("5 rolls of d4", listOfRolls(5, tetrahedron));
+// console.log("3 rolls of d20", listOfRolls(3, twentySidedDie));
+

@@ -131,6 +131,28 @@
     // console.log(removeAll([1,2,3], 2));
     // console.log(removeAll([2,2,3,4,5,2,2], 2));
 
+    const getNFibonacci = num => {
+        var fibonacciArray = [0, 1];
 
+        if (num === 1)
+            return [0];
+        if (num === 2)
+            return fibonacciArray;
+
+        for (var i = 2; i < num; i++) {
+            fibonacciArray.push(
+                fibonacciArray[i-1] +
+                fibonacciArray[i-2]
+            );
+        }
+        return fibonacciArray;
+    };
+
+    const firstTenFibonacciNumbers = () => {
+        return getNFibonacci(10);
+    };
+
+    // console.log(firstTenFibonacciNumbers());
+    // console.log(getNFibonacci(5));
 
 })();

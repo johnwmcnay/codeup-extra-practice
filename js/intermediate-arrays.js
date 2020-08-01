@@ -82,3 +82,40 @@ const getUniqueValues = arr => {
 const duplicateEntries = ["a", "b", "a", "c", "b", "c"];
 // console.log(getUniqueValues(duplicateEntries));
 
+//reverses the array
+const reverseArray = arr => {
+    return arr.reverse();
+};
+
+// console.log(reverseArray(testArray1));
+// console.log(reverseArray(testArray2));
+
+const quotes = ["All the world's a stage...",
+    "Give me liberty or give me death",
+    "An eye for an eye leaves the whole world blind",
+    ]
+
+//gets a random quote/index from an optional array argument
+const getRandomQuote = (arr=quotes) => {
+    var index = Math.floor(Math.random() * arr.length);
+    return arr[index];
+};
+
+// console.log(getRandomQuote());
+// console.log(getRandomQuote(duplicateEntries));
+
+const getIndexesOf = (char, word) => {
+    const strArray = word.split('');
+    var newArray = [];
+
+    strArray.forEach( (letter, index) => {
+        if (letter === char) {
+            newArray.push(index);
+        }
+    });
+    return newArray;
+};
+
+// console.log(getIndexesOf("a", "banana"));
+// console.log(getIndexesOf("z", "banana"));
+
